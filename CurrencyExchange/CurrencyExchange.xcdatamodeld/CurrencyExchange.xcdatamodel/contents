@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Currency" representedClassName="Currency" syncable="YES">
+        <attribute name="code" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Rate" representedClassName="Rate" syncable="YES">
+        <attribute name="rate" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="from" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" syncable="YES"/>
+        <relationship name="to" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Currency" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Rate" positionX="-54" positionY="9" width="128" height="90"/>
+    </elements>
 </model>

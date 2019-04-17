@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		AFF309BE22679BA500F95A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309BD22679BA500F95A95 /* AppDelegate.swift */; };
-		AFF309C022679BA500F95A95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309BF22679BA500F95A95 /* ViewController.swift */; };
-		AFF309C322679BA500F95A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF309C122679BA500F95A95 /* Main.storyboard */; };
 		AFF309C622679BA500F95A95 /* CurrencyExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF309C422679BA500F95A95 /* CurrencyExchange.xcdatamodeld */; };
 		AFF309C822679BA600F95A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF309C722679BA600F95A95 /* Assets.xcassets */; };
 		AFF309CB22679BA600F95A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF309C922679BA600F95A95 /* LaunchScreen.storyboard */; };
+		AFF309D522679DF700F95A95 /* RateListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309D422679DF700F95A95 /* RateListTableViewController.swift */; };
+		AFF309D922679FD900F95A95 /* currencies.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFF309D822679FD900F95A95 /* currencies.txt */; };
+		AFF309DB2267A01F00F95A95 /* FromCurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309DA2267A01F00F95A95 /* FromCurrencyTableViewController.swift */; };
+		AFF309DD2267A02800F95A95 /* ToCurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309DC2267A02800F95A95 /* ToCurrencyTableViewController.swift */; };
+		AFF309DF2267A2F000F95A95 /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309DE2267A2F000F95A95 /* RateTableViewCell.swift */; };
+		AFF309E22267A4E300F95A95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFF309E42267A4E300F95A95 /* Localizable.strings */; };
+		AFF309E72267A53300F95A95 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309E62267A53300F95A95 /* String+Localized.swift */; };
+		AFF309FC2267AA4200F95A95 /* RateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309FB2267AA4200F95A95 /* RateDataManager.swift */; };
+		AFF309FE2267AED400F95A95 /* CurrencyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309FD2267AED400F95A95 /* CurrencyDataManager.swift */; };
+		AFF30A002267B6B000F95A95 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309FF2267B6B000F95A95 /* CurrencyTableViewCell.swift */; };
+		AFF30A0D2267C69D00F95A95 /* Rate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF30A092267C69D00F95A95 /* Rate+CoreDataClass.swift */; };
+		AFF30A0E2267C69D00F95A95 /* Rate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF30A0A2267C69D00F95A95 /* Rate+CoreDataProperties.swift */; };
+		AFF30A0F2267C69D00F95A95 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF30A0B2267C69D00F95A95 /* Currency+CoreDataClass.swift */; };
+		AFF30A102267C69D00F95A95 /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF30A0C2267C69D00F95A95 /* Currency+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFF309BA22679BA500F95A95 /* CurrencyExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF309BD22679BA500F95A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFF309BF22679BA500F95A95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFF309C222679BA500F95A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFF309C522679BA500F95A95 /* CurrencyExchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurrencyExchange.xcdatamodel; sourceTree = "<group>"; };
 		AFF309C722679BA600F95A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFF309CA22679BA600F95A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFF309CC22679BA600F95A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF309D422679DF700F95A95 /* RateListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateListTableViewController.swift; sourceTree = "<group>"; };
+		AFF309D822679FD900F95A95 /* currencies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = currencies.txt; sourceTree = "<group>"; };
+		AFF309DA2267A01F00F95A95 /* FromCurrencyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromCurrencyTableViewController.swift; sourceTree = "<group>"; };
+		AFF309DC2267A02800F95A95 /* ToCurrencyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCurrencyTableViewController.swift; sourceTree = "<group>"; };
+		AFF309DE2267A2F000F95A95 /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
+		AFF309E32267A4E300F95A95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AFF309E62267A53300F95A95 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		AFF309FB2267AA4200F95A95 /* RateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDataManager.swift; sourceTree = "<group>"; };
+		AFF309FD2267AED400F95A95 /* CurrencyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDataManager.swift; sourceTree = "<group>"; };
+		AFF309FF2267B6B000F95A95 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		AFF30A092267C69D00F95A95 /* Rate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFF30A0A2267C69D00F95A95 /* Rate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFF30A0B2267C69D00F95A95 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFF30A0C2267C69D00F95A95 /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,75 @@
 		AFF309BC22679BA500F95A95 /* CurrencyExchange */ = {
 			isa = PBXGroup;
 			children = (
+				AFF309E42267A4E300F95A95 /* Localizable.strings */,
+				AFF309FA2267AA0700F95A95 /* Managers */,
+				AFF309E52267A51F00F95A95 /* Extensions */,
+				AFF309D722679E8E00F95A95 /* Resources */,
+				AFF309D622679E2E00F95A95 /* Cells */,
+				AFF309D322679DCD00F95A95 /* Models */,
+				AFF309D222679DC100F95A95 /* Controllers */,
 				AFF309BD22679BA500F95A95 /* AppDelegate.swift */,
-				AFF309BF22679BA500F95A95 /* ViewController.swift */,
-				AFF309C122679BA500F95A95 /* Main.storyboard */,
 				AFF309C722679BA600F95A95 /* Assets.xcassets */,
 				AFF309C922679BA600F95A95 /* LaunchScreen.storyboard */,
 				AFF309CC22679BA600F95A95 /* Info.plist */,
 				AFF309C422679BA500F95A95 /* CurrencyExchange.xcdatamodeld */,
 			);
 			path = CurrencyExchange;
+			sourceTree = "<group>";
+		};
+		AFF309D222679DC100F95A95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFF309D422679DF700F95A95 /* RateListTableViewController.swift */,
+				AFF309DA2267A01F00F95A95 /* FromCurrencyTableViewController.swift */,
+				AFF309DC2267A02800F95A95 /* ToCurrencyTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFF309D322679DCD00F95A95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFF30A092267C69D00F95A95 /* Rate+CoreDataClass.swift */,
+				AFF30A0A2267C69D00F95A95 /* Rate+CoreDataProperties.swift */,
+				AFF30A0B2267C69D00F95A95 /* Currency+CoreDataClass.swift */,
+				AFF30A0C2267C69D00F95A95 /* Currency+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AFF309D622679E2E00F95A95 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFF309DE2267A2F000F95A95 /* RateTableViewCell.swift */,
+				AFF309FF2267B6B000F95A95 /* CurrencyTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AFF309D722679E8E00F95A95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFF309D822679FD900F95A95 /* currencies.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AFF309E52267A51F00F95A95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFF309E62267A53300F95A95 /* String+Localized.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFF309FA2267AA0700F95A95 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AFF309FB2267AA4200F95A95 /* RateDataManager.swift */,
+				AFF309FD2267AED400F95A95 /* CurrencyDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +209,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF309D922679FD900F95A95 /* currencies.txt in Resources */,
+				AFF309E22267A4E300F95A95 /* Localizable.strings in Resources */,
 				AFF309CB22679BA600F95A95 /* LaunchScreen.storyboard in Resources */,
 				AFF309C822679BA600F95A95 /* Assets.xcassets in Resources */,
-				AFF309C322679BA500F95A95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,29 +223,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF30A002267B6B000F95A95 /* CurrencyTableViewCell.swift in Sources */,
 				AFF309C622679BA500F95A95 /* CurrencyExchange.xcdatamodeld in Sources */,
-				AFF309C022679BA500F95A95 /* ViewController.swift in Sources */,
+				AFF309FC2267AA4200F95A95 /* RateDataManager.swift in Sources */,
+				AFF30A0D2267C69D00F95A95 /* Rate+CoreDataClass.swift in Sources */,
+				AFF309D522679DF700F95A95 /* RateListTableViewController.swift in Sources */,
+				AFF309FE2267AED400F95A95 /* CurrencyDataManager.swift in Sources */,
+				AFF30A0F2267C69D00F95A95 /* Currency+CoreDataClass.swift in Sources */,
+				AFF309DB2267A01F00F95A95 /* FromCurrencyTableViewController.swift in Sources */,
 				AFF309BE22679BA500F95A95 /* AppDelegate.swift in Sources */,
+				AFF309E72267A53300F95A95 /* String+Localized.swift in Sources */,
+				AFF309DD2267A02800F95A95 /* ToCurrencyTableViewController.swift in Sources */,
+				AFF309DF2267A2F000F95A95 /* RateTableViewCell.swift in Sources */,
+				AFF30A102267C69D00F95A95 /* Currency+CoreDataProperties.swift in Sources */,
+				AFF30A0E2267C69D00F95A95 /* Rate+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AFF309C122679BA500F95A95 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFF309C222679BA500F95A95 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFF309C922679BA600F95A95 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AFF309CA22679BA600F95A95 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AFF309E42267A4E300F95A95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFF309E32267A4E300F95A95 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CNQUNCVHP;
 				INFOPLIST_FILE = CurrencyExchange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.future.CurrencyExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CNQUNCVHP;
 				INFOPLIST_FILE = CurrencyExchange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.future.CurrencyExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
