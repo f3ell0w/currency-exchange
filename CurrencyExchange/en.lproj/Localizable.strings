@@ -3,3 +3,14 @@
 "title.second.currency" = "Second currency";
 
 "rate.remove" = "Remove";
+"rate.save.error" = "Error when saving";
+"rate.remove.error" = "Error when removing";
+
+"rates.empty" = "You have not added any rates by now";
+
+"update.dialog.message" = "Rates have not been updated";
+"update.dialog.action" = "Update";
+"update.dialog.error" = "Error fetching rates";
+"update.dialog.success" = "Rates have been updated";
+
+"dialog.dismiss" = "Dismiss";

@@ -19,10 +19,10 @@ class FromCurrencyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currencies = CurrencyDataManager.instance().loadCurrencies()
-        
-        tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "currency")
+        tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.IDENTIFIER)
         tableView.tableFooterView = UIView.init(frame: .zero)
+        
+        currencies = CurrencyDataManager.shared.loadCurrencies()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +30,7 @@ class FromCurrencyTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "currency", for: indexPath) as! CurrencyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.IDENTIFIER, for: indexPath) as! CurrencyTableViewCell
         let currency = currencies[indexPath.row]
         cell.configure(with: currency)
         return cell
@@ -38,6 +38,7 @@ class FromCurrencyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let currency = currencies[indexPath.row]
         let controller = ToCurrencyTableViewController()
         controller.fromCurrency = currency

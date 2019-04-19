@@ -10,7 +10,7 @@ import CoreData
 
 class CurrencyDataManager {
     
-    private static var shared: CurrencyDataManager?
+    private static var instance: CurrencyDataManager?
     
     private let persistenceContainer: NSPersistentContainer
     
@@ -18,19 +18,21 @@ class CurrencyDataManager {
         self.persistenceContainer = container
     }
     
-    class func initialize(container: NSPersistentContainer) {
-        if shared == nil {
-            shared = CurrencyDataManager(container: container)
+    class func initialize(_ container: NSPersistentContainer) {
+        if instance == nil {
+            instance = CurrencyDataManager(container: container)
             return
         }
         fatalError("Already initialized")
     }
     
-    class func instance() -> CurrencyDataManager {
-        if shared == nil {
-            fatalError("Not initialized")
+    static var shared: CurrencyDataManager {
+        get {
+            if instance == nil {
+                fatalError("Not initialized")
+            }
+            return instance!
         }
-        return shared!
     }
     
     func loadCurrencies() -> [Currency] {
@@ -47,31 +49,22 @@ class CurrencyDataManager {
             return []
         }
     }
-    
-    func saveCurrency(code: String, name: String) {
-        let context = persistenceContainer.viewContext
-        let currency = Currency(context: context)
-        currency.code = code
-        currency.name = name
-        do {
-            try context.save()
-        } catch {
-            print(error)
-        }
-    }
-    
+
     private func loadCurrenciesFromFile() -> [Currency] {
         let context = persistenceContainer.viewContext
         if let path = Bundle.main.path(forResource: "currencies", ofType: "txt") {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
                 let currencyStrings = data.components(separatedBy: .newlines)
-                return currencyStrings.map { $0.split(separator: "-") }.map { (splitted) -> Currency in
-                    let currency = Currency(context: context)
-                    currency.code = splitted.first?.trimmingCharacters(in: .whitespaces) ?? ""
-                    currency.name = splitted.last?.trimmingCharacters(in: .whitespaces) ?? ""
-                    return currency
-                }
+                return currencyStrings.map { $0.split(separator: "-")
+                    .map { $0.trimmingCharacters(in: .whitespaces) } }
+                    .filter { !$0.isEmpty }
+                    .map { (splitted) -> Currency in
+                        let currency = Currency(context: context)
+                        currency.code = splitted.first ?? ""
+                        currency.name = splitted.last ?? ""
+                        return currency
+                    }
             } catch {
                 return []
             }

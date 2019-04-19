@@ -21,10 +21,11 @@ class ToCurrencyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currencies = CurrencyDataManager.instance().loadCurrencies()
-        
-        tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "currency")
+        tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.IDENTIFIER)
         tableView.tableFooterView = UIView.init(frame: .zero)
+        
+        let localCurrencies = CurrencyDataManager.shared.loadCurrencies().filter { $0.code != fromCurrency.code }
+        currencies = localCurrencies
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +33,7 @@ class ToCurrencyTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "currency", for: indexPath) as! CurrencyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.IDENTIFIER, for: indexPath) as! CurrencyTableViewCell
         let currency = currencies[indexPath.row]
         cell.configure(with: currency)
         return cell
@@ -40,9 +41,14 @@ class ToCurrencyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currency = currencies[indexPath.row]
-        RateDataManager.instance().saveRate(fromCur: fromCurrency, toCur: currency, completion: {
-            self.navigationController?.popToRootViewController(animated: true)
-        })
+        RateDataManager.shared.saveRate(from: fromCurrency, to: currency) { (result) in
+            switch result {
+            case .success(_):
+                self.navigationController?.popToRootViewController(animated: true)
+            case .error(_):
+                self.showMessage("rate.save.error".localized)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF37020722699D8B0046E3E4 /* ServerRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37020622699D8B0046E3E4 /* ServerRate.swift */; };
+		AF37020B2269D5ED0046E3E4 /* UIViewController+ShowMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37020A2269D5ED0046E3E4 /* UIViewController+ShowMessage.swift */; };
 		AFF309BE22679BA500F95A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF309BD22679BA500F95A95 /* AppDelegate.swift */; };
 		AFF309C622679BA500F95A95 /* CurrencyExchange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFF309C422679BA500F95A95 /* CurrencyExchange.xcdatamodeld */; };
 		AFF309C822679BA600F95A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF309C722679BA600F95A95 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF37020622699D8B0046E3E4 /* ServerRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRate.swift; sourceTree = "<group>"; };
+		AF37020A2269D5ED0046E3E4 /* UIViewController+ShowMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowMessage.swift"; sourceTree = "<group>"; };
 		AFF309BA22679BA500F95A95 /* CurrencyExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF309BD22679BA500F95A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF309C522679BA500F95A95 /* CurrencyExchange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurrencyExchange.xcdatamodel; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				AFF30A0A2267C69D00F95A95 /* Rate+CoreDataProperties.swift */,
 				AFF30A0B2267C69D00F95A95 /* Currency+CoreDataClass.swift */,
 				AFF30A0C2267C69D00F95A95 /* Currency+CoreDataProperties.swift */,
+				AF37020622699D8B0046E3E4 /* ServerRate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF309E62267A53300F95A95 /* String+Localized.swift */,
+				AF37020A2269D5ED0046E3E4 /* UIViewController+ShowMessage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,12 +236,14 @@
 				AFF309D522679DF700F95A95 /* RateListTableViewController.swift in Sources */,
 				AFF309FE2267AED400F95A95 /* CurrencyDataManager.swift in Sources */,
 				AFF30A0F2267C69D00F95A95 /* Currency+CoreDataClass.swift in Sources */,
+				AF37020B2269D5ED0046E3E4 /* UIViewController+ShowMessage.swift in Sources */,
 				AFF309DB2267A01F00F95A95 /* FromCurrencyTableViewController.swift in Sources */,
 				AFF309BE22679BA500F95A95 /* AppDelegate.swift in Sources */,
 				AFF309E72267A53300F95A95 /* String+Localized.swift in Sources */,
 				AFF309DD2267A02800F95A95 /* ToCurrencyTableViewController.swift in Sources */,
 				AFF309DF2267A2F000F95A95 /* RateTableViewCell.swift in Sources */,
 				AFF30A102267C69D00F95A95 /* Currency+CoreDataProperties.swift in Sources */,
+				AF37020722699D8B0046E3E4 /* ServerRate.swift in Sources */,
 				AFF30A0E2267C69D00F95A95 /* Rate+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

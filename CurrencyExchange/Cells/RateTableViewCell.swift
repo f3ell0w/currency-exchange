@@ -10,6 +10,8 @@ import UIKit
 
 class RateTableViewCell: UITableViewCell {
     
+    static let IDENTIFIER = "rate"
+    
     private lazy var nomineeLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -38,19 +40,25 @@ class RateTableViewCell: UITableViewCell {
         return label
     }()
     
+    private lazy var leftStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [nomineeLabel, nomineeNameLabel])
+        stack.axis = .vertical
+        stack.distribution = .fillProportionally
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private lazy var rightStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [valueLabel, secondNomineeLabel])
+        stack.axis = .vertical
+        stack.distribution = .fillProportionally
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        let leftStack = UIStackView(arrangedSubviews: [nomineeLabel, nomineeNameLabel])
-        leftStack.axis = .vertical
-        leftStack.distribution = .fillProportionally
-        leftStack.translatesAutoresizingMaskIntoConstraints = false
-        
-        let rightStack = UIStackView(arrangedSubviews: [valueLabel, secondNomineeLabel])
-        rightStack.axis = .vertical
-        rightStack.distribution = .fillProportionally
-        rightStack.translatesAutoresizingMaskIntoConstraints = false
-        
+
         addSubview(leftStack)
         addSubview(rightStack)
         

@@ -10,6 +10,8 @@ import UIKit
 
 class CurrencyTableViewCell: UITableViewCell {
 
+    static let IDENTIFIER = "currency"
+    
     private lazy var codeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -35,7 +37,8 @@ class CurrencyTableViewCell: UITableViewCell {
         
         let codeLabelConstraints = [
             codeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            codeLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            codeLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            codeLabel.widthAnchor.constraint(equalToConstant: 40)
         ]
         let nameLabelConstraints = [
             nameLabel.leftAnchor.constraint(equalTo: codeLabel.rightAnchor, constant: 16),
