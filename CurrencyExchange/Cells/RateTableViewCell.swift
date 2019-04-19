@@ -65,11 +65,13 @@ class RateTableViewCell: UITableViewCell {
         let leftStackConstraints = [
             leftStack.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             leftStack.rightAnchor.constraint(equalTo: rightStack.leftAnchor, constant: -16),
-            leftStack.heightAnchor.constraint(equalToConstant: 80)
+            leftStack.topAnchor.constraint(equalTo: topAnchor),
+            leftStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ]
         let rightStackConstraints = [
             rightStack.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
-            rightStack.heightAnchor.constraint(equalToConstant: 80)
+            rightStack.topAnchor.constraint(equalTo: topAnchor),
+            rightStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ]
         NSLayoutConstraint.activate(rightStackConstraints)
         NSLayoutConstraint.activate(leftStackConstraints)
